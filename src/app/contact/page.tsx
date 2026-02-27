@@ -13,9 +13,9 @@ const CONTACTS = [
   },
   {
     title: "Pharmacist",
-    phoneDisplay: "+265 991 03 21 03",
-    phoneTel: "+265991032103",
-    phoneWa: "265991032103",
+    phoneDisplay: "+265 882 03 53 13",
+    phoneTel: "+265882035313",
+    phoneWa: "265882035313",
   },
   {
     title: "Manager",
@@ -89,7 +89,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen text-slate-900">
       {/* Soft background like the new Home */}
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-emerald-50/70 via-white to-white" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-linear-to-b from-emerald-50/70 via-white to-white" />
       <div className="pointer-events-none fixed inset-0 -z-10 opacity-60 [background:radial-gradient(900px_500px_at_15%_15%,rgba(16,185,129,0.18),transparent),radial-gradient(900px_500px_at_85%_10%,rgba(59,130,246,0.12),transparent)]" />
 
       {/* Content Container */}
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 Pleasant Pharmacy
                 <br />
                 <span className="text-slate-600">
-                  Glyn Jones Road, Blantyre, Malawi
+                Mount Pleasant along Mahatma Gandhi Road at Rosewood Mall
                 </span>
               </p>
             </div>
@@ -147,15 +147,19 @@ export default function ContactPage() {
               <ul className="mt-3 space-y-2 text-slate-800 text-base">
                 <li className="flex items-center justify-between gap-3">
                   <span className="text-slate-600">Mon–Fri</span>
-                  <span className="font-medium">8:00am – 8:00pm</span>
+                  <span className="font-medium">8:00am – 7:00pm</span>
                 </li>
                 <li className="flex items-center justify-between gap-3">
                   <span className="text-slate-600">Sat</span>
-                  <span className="font-medium">8:00am – 6:00pm</span>
+                  <span className="font-medium">8:00am – 5:00pm</span>
                 </li>
                 <li className="flex items-center justify-between gap-3">
-                  <span className="text-slate-600">Sun & Holidays</span>
-                  <span className="font-medium">10:00am – 4:00pm</span>
+                  <span className="text-slate-600">Sun</span>
+                  <span className="font-medium">1:00pm – 5:00pm</span>
+                </li>
+                <li className="flex items-center justify-between gap-3">
+                  <span className="text-slate-600">Holidays</span>
+                  <span className="font-medium">8:00am – 12:00pm</span>
                 </li>
               </ul>
             </div>

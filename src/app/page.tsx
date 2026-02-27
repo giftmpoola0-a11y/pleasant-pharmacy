@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CONTACTS = {
   pharmacy: { phoneTel: "+265897533245" },
-  pharmacist: { phoneTel: "+265991032103" },
+  pharmacist: { phoneTel: "+265882035313" },
   manager: { phoneTel: "+265999925400" },
 };
 
