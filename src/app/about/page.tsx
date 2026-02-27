@@ -182,14 +182,7 @@ export default function AboutPage() {
                   {p.desc}
                 </p>
 
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center justify-center rounded-2xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 hover:-translate-y-px"
-                >
-                  Message on WhatsApp
-                </a>
+                
               </div>
             </div>
           ))}
