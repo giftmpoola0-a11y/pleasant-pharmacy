@@ -231,7 +231,7 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:brightness-[1.05]"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-600/10 via-transparent to-transparent transition-all duration-700 group-hover:from-emerald-600/20" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-tr from-emerald-600/10 via-transparent to-transparent transition-all duration-700 group-hover:from-emerald-600/20" />
 
                 <div className="absolute left-3 bottom-3 rounded-xl border border-white/40 bg-white/70 px-3 py-1 backdrop-blur">
                   <div className="text-xs font-semibold text-slate-700">

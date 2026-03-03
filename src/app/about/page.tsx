@@ -7,19 +7,19 @@ const LEADERSHIP = [
   
   {
     role: "Manager",
-    name: "Mrs. A Chiwalo",
+    name: "Mrs. A. Chiwalo",
     desc: "Operations, service coordination, and making sure every visit is smooth and professional.",
     img: "/team/manager.jpg",
   },
   {
     role: "Pharmacist",
-    name: "Mr. Michael Phiri",
+    name: "Mr. M. Phiri",
     desc: "Prescription review, medication counselling, side-effect guidance, and safe dispensing.",
     img: "/team/pharmacist.jpg",
   },
   {
     role: "Pharmacy Assistant",
-    name: "Pharmacy Assistant",
+    name: "Ms. D. Chinsesela",
     desc: "Front-desk support, customer care, stock support, and helping you find the right over-the-counter products.",
     img: "/team/pharmacy-assistant.jpg",
   },
@@ -148,8 +148,8 @@ export default function AboutPage() {
             Leadership & Staff
           </h2>
           <p className="text-slate-600 max-w-3xl">
-            Meet the people behind Pleasant Pharmacy. Our team is here to help you
-            with prescriptions, guidance, refills, and health support.
+            Meet the team behind Pleasant Pharmacy. We are committed to
+            professional service, patient guidance, and reliable care.
           </p>
         </div>
 
@@ -157,30 +157,19 @@ export default function AboutPage() {
           {LEADERSHIP.map((p) => (
             <div
               key={p.role}
-              className="group rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-6 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(2,6,23,0.12)]"
+              className="rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-7 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(2,6,23,0.12)]"
             >
-              {/* Portrait frame (like your reference) */}
-              <div className="mx-auto w-44 h-60 overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/70 shadow-sm">
-                <img
-                  src={p.img}
-                  alt={`${p.role} photo`}
-                  className="w-full h-full object-cover object-top"
-                />
+              <div className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
+                {p.role}
               </div>
 
-              <div className="mt-5 text-center">
-                <div className="text-xs font-semibold text-slate-500">
-                  {p.role}
-                </div>
-                <div className="mt-1 text-lg font-bold tracking-tight">
-                  {p.name}
-                </div>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {p.desc}
-                </p>
-
-                
+              <div className="mt-2 text-lg font-bold tracking-tight text-slate-900">
+                {p.name}
               </div>
+
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                {p.desc}
+              </p>
             </div>
           ))}
         </div>
