@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const CONTACTS = {
   pharmacy: { phoneTel: "+265897533245" },
@@ -8,7 +9,8 @@ const CONTACTS = {
   manager: { phoneTel: "+265999925400" },
 };
 
-const WHATSAPP = "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20would%20like%20to%20inquire.";
+const WHATSAPP =
+  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20would%20like%20to%20inquire.";
 
 const SERVICES = [
   "Dispensing drugs",
@@ -22,23 +24,49 @@ const SERVICES = [
 function IconShield() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M9 12l2 2 4-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M9 12l2 2 4-5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
+
 function IconSpark() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path
+        d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
+
 function IconClock() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path
+        d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M12 6v6l4 2"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -52,43 +80,63 @@ export default function Home() {
           {/* Left */}
           <div>
             <div className="inline-flex items-center gap-2 pp-pill text-slate-700">
-              <span className="text-emerald-600"><IconShield /></span>
-              <span className="text-sm font-medium">Licensed pharmacy • Blantyre, Malawi</span>
+              <span className="text-emerald-600">
+                <IconShield />
+              </span>
+              <span className="text-sm font-medium">
+                Licensed pharmacy • Blantyre, Malawi
+              </span>
             </div>
 
             <h1 className="mt-6 text-5xl md:text-6xl font-bold tracking-tight leading-[1.03]">
-              Where wellness meets <span className="text-emerald-700">care</span>.
+              Where wellness meets <span className="text-emerald-700">care</span>
+              .
             </h1>
 
             <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-xl">
-              Modern pharmacy support in Blantyre — quick dispensing, symptom help, tests, and convenient refills.
+              Modern pharmacy support in Blantyre — quick dispensing, symptom
+              help, tests, and convenient refills.
             </p>
+
+            {/* Main hero image */}
             <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200/70 bg-white/60 shadow-[0_18px_55px_rgba(2,6,23,0.10)]">
-              <div className="relative">
-                {/* Image */}
-                <img
-                  src="/images/hero.jpg"
-                  alt="Pleasant Pharmacy"
-                  className="h-[260px] w-full object-cover"
+              <div className="group relative h-[280px] md:h-[360px] lg:h-[400px] w-full overflow-hidden rounded-3xl">
+                <Image
+                  src="/images/hero.webp"
+                  alt="Pleasant Pharmacy storefront"
+                  fill
+                  priority
+                  className="object-cover object-center bg-white transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:brightness-[1.05]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
 
                 {/* Soft overlay tint */}
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-tr from-emerald-600/10 via-transparent to-sky-500/10" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-tr from-emerald-600/10 via-transparent to-transparent transition-all duration-700 group-hover:from-emerald-600/20" />
 
                 {/* Glass label */}
                 <div className="absolute left-4 bottom-4 rounded-2xl border border-white/50 bg-white/70 px-4 py-2 backdrop-blur">
-                  <div className="text-xs font-semibold text-slate-700">Pleasant Pharmacy</div>
-                  <div className="text-[13px] text-slate-600">Blantyre, Malawi</div>
+                  <div className="text-xs font-semibold text-slate-700">
+                    Pleasant Pharmacy
+                  </div>
+                  <div className="text-[13px] text-slate-600">
+                    Blantyre, Malawi
+                  </div>
                 </div>
               </div>
             </div>
 
+            {/* Primary CTAs */}
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <Link href="/refill" className="pp-btn-primary text-center">
                 Refill Prescription
               </Link>
 
-              <a href={WHATSAPP} target="_blank" rel="noreferrer" className="pp-btn-ghost text-center">
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noreferrer"
+                className="pp-btn-ghost text-center"
+              >
                 WhatsApp Us
               </a>
 
@@ -100,21 +148,29 @@ export default function Home() {
             {/* Mini stats */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="pp-glass pp-noise rounded-2xl px-4 py-3 flex items-center gap-3">
-                <span className="text-cyan-600"><IconSpark /></span>
+                <span className="text-cyan-600">
+                  <IconSpark />
+                </span>
                 <div>
                   <div className="text-sm font-semibold">Fast service</div>
                   <div className="text-xs text-slate-600">Quick dispensing</div>
                 </div>
               </div>
+
               <div className="pp-glass pp-noise rounded-2xl px-4 py-3 flex items-center gap-3">
-                <span className="text-emerald-600"><IconClock /></span>
+                <span className="text-emerald-600">
+                  <IconClock />
+                </span>
                 <div>
                   <div className="text-sm font-semibold">Easy refills</div>
                   <div className="text-xs text-slate-600">WhatsApp supported</div>
                 </div>
               </div>
+
               <div className="pp-glass pp-noise rounded-2xl px-4 py-3 flex items-center gap-3">
-                <span className="text-slate-800"><IconShield /></span>
+                <span className="text-slate-800">
+                  <IconShield />
+                </span>
                 <div>
                   <div className="text-sm font-semibold">Trusted care</div>
                   <div className="text-xs text-slate-600">Patient-first</div>
@@ -127,8 +183,12 @@ export default function Home() {
           <div className="pp-card pp-glow p-6 md:p-7">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-sm text-slate-500 font-medium">Services</div>
-                <div className="text-2xl font-bold mt-1">What we can help with</div>
+                <div className="text-sm text-slate-500 font-medium">
+                  Services
+                </div>
+                <div className="text-2xl font-bold mt-1">
+                  What we can help with
+                </div>
               </div>
               <div className="pp-pill text-xs text-slate-600">
                 <span className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -138,13 +198,17 @@ export default function Home() {
 
             <div className="mt-6 grid grid-cols-1 gap-3">
               {SERVICES.map((s) => (
-                <div key={s} className="pp-glass pp-noise rounded-2xl px-4 py-3 flex items-center justify-between">
+                <div
+                  key={s}
+                  className="pp-glass pp-noise rounded-2xl px-4 py-3 flex items-center justify-between"
+                >
                   <div className="font-medium">{s}</div>
                   <div className="text-emerald-600">↗</div>
                 </div>
               ))}
             </div>
 
+            {/* Quick actions */}
             <div className="mt-6 pp-glass pp-noise rounded-2xl p-5">
               <div className="text-sm font-semibold">Quick actions</div>
               <div className="mt-3 flex flex-col sm:flex-row gap-3">
@@ -154,6 +218,29 @@ export default function Home() {
                 <Link href="/contact" className="pp-btn-ghost text-center w-full">
                   Location & Contact
                 </Link>
+              </div>
+            </div>
+
+            {/* ✅ Secondary Pharmacy View (moved to RIGHT) */}
+            <div className="mt-5 overflow-hidden rounded-3xl border border-slate-200/70 bg-white/60 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+              <div className="group relative h-[160px] md:h-[190px] w-full overflow-hidden">
+                <Image
+                  src="/images/interior.webp"
+                  alt="Pleasant Pharmacy interior"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover object-center transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:brightness-[1.05]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-600/10 via-transparent to-transparent transition-all duration-700 group-hover:from-emerald-600/20" />
+
+                <div className="absolute left-3 bottom-3 rounded-xl border border-white/40 bg-white/70 px-3 py-1 backdrop-blur">
+                  <div className="text-xs font-semibold text-slate-700">
+                    Inside Pleasant Pharmacy
+                  </div>
+                  <div className="text-[12px] text-slate-600">
+                    Consultation & Dispensing
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -186,4 +273,3 @@ export default function Home() {
     </main>
   );
 }
-

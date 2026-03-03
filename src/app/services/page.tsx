@@ -1,42 +1,56 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
-const SERVICES = [
+const WHATSAPP_LINK =
+  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question%20about%20your%20services.";
+
+type Service = {
+  name: string;
+  desc: string;
+  img: { src: string; alt: string };
+  secondary: { label: string; href: string };
+};
+
+const SERVICES: Service[] = [
   {
     name: "Dispensing Drugs",
     desc: "Get your prescriptions and over-the-counter medicines quickly and safely dispensed.",
-    icon: "💊",
+    img: { src: "/images/dispensing.jpg", alt: "Pharmacist dispensing medicine" },
+    secondary: { label: "Contact →", href: "/contact" },
   },
   {
     name: "Responding to Symptoms",
     desc: "Describe your symptoms and get reliable pharmacy advice and suggested remedies.",
-    icon: "🩺",
+    img: { src: "/images/symptoms.jpg", alt: "Pharmacy consultation" },
+    secondary: { label: "Contact →", href: "/contact" },
   },
   {
     name: "Scheduled Prescription Refill",
     desc: "Never miss a dose—set up convenient, recurring medication refills.",
-    icon: "🗓️",
+    img: { src: "/images/refill.jpg", alt: "Prescription refill" },
+    secondary: { label: "Refill →", href: "/refill" },
   },
   {
     name: "BP & Weight Monitoring",
     desc: "Track your blood pressure and weight with our in-store health checks.",
-    icon: "📈",
+    img: { src: "/images/bp.png", alt: "Blood pressure monitoring" },
+    secondary: { label: "Visit Us →", href: "/contact" },
   },
   {
     name: "Malaria Rapid Test",
     desc: "Fast and reliable malaria testing for prompt diagnosis and reassurance.",
-    icon: "🧪",
+    img: { src: "/images/malaria-test.jfif", alt: "Malaria rapid test" },
+    secondary: { label: "Visit Us →", href: "/contact" },
   },
   {
     name: "Virtual Consultation",
     desc: "Consult our pharmacists online for guidance and recommended next steps.",
-    icon: "💬",
+    img: { src: "/images/virtual.jpg", alt: "Virtual consultation" },
+    secondary: { label: "Contact →", href: "/contact" },
   },
 ];
-
-const WHATSAPP_LINK =
-  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question%20about%20your%20services.";
 
 export default function ServicesPage() {
   return (
@@ -79,44 +93,53 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Cards */}
+      {/* Picture Cards */}
       <section className="mx-auto max-w-6xl px-4 py-6">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((svc) => (
             <div
               key={svc.name}
-              className="group rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-6 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(2,6,23,0.12)]"
+              className="group overflow-hidden rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(2,6,23,0.12)]"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div className="text-xl font-semibold tracking-tight">
-                  {svc.name}
-                </div>
-
-                <div className="h-11 w-11 rounded-2xl border border-slate-200/70 bg-white/70 grid place-items-center shadow-sm transition group-hover:scale-[1.03]">
-                  <span className="text-lg">{svc.icon}</span>
-                </div>
+              {/* Image */}
+              <div className="relative h-44 w-full">
+                <Image
+                  src={svc.img.src}
+                  alt={svc.img.alt}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={false}
+                />
+                {/* Soft overlay for readability */}
+                <div className="absolute inset-0 bg-linear-to-t from-white/75 via-white/10 to-transparent" />
               </div>
 
-              <p className="mt-3 text-slate-600 text-base leading-relaxed">
-                {svc.desc}
-              </p>
+              {/* Content */}
+              <div className="p-6">
+                <div className="text-xl font-semibold tracking-tight">{svc.name}</div>
 
-              <div className="mt-5 flex items-center justify-between gap-3">
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 rounded-2xl bg-slate-900 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 hover:-translate-y-px"
-                >
-                  Ask on WhatsApp
-                </a>
+                <p className="mt-3 text-slate-600 text-base leading-relaxed">
+                  {svc.desc}
+                </p>
 
-                <Link
-                  href="/refill"
-                  className="rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white hover:-translate-y-px"
-                >
-                  Refill →
-                </Link>
+                <div className="mt-5 flex items-center justify-between gap-3">
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-2xl bg-slate-900 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 hover:-translate-y-px"
+                  >
+                    Ask on WhatsApp
+                  </a>
+
+                  <Link
+                    href={svc.secondary.href}
+                    className="rounded-2xl border border-slate-200/70 bg-white/70 px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white hover:-translate-y-px"
+                  >
+                    {svc.secondary.label}
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

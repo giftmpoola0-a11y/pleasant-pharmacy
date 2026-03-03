@@ -59,13 +59,13 @@ export default function AboutPage() {
         </div>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-          Where wellness meets care.
+          Where wellness meets <span className="text-emerald-700">care</span>
         </h1>
 
         <p className="mt-4 max-w-3xl text-lg text-slate-700 leading-relaxed">
-          Pleasant Pharmacy is dedicated to providing modern, patient-centered
-          pharmacy care in Blantyre, Malawi — quick dispensing, guidance you can
-          trust, and convenient refills.
+        Pleasant Pharmacy is a retail pharmacy in Blantyre, Malawi, 
+        committed to quick dispensing, patient-first support, 
+        and access to quality medicines and orthopedic appliances.
         </p>
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -100,17 +100,15 @@ export default function AboutPage() {
           <div className="rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-7 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_55px_rgba(2,6,23,0.10)]">
             <h2 className="text-xl font-bold tracking-tight">Our Mission</h2>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              To provide safe, professional, and friendly pharmacy services that
-              help our community stay healthy — through accurate dispensing,
-              helpful counselling, and convenient support.
+            To become a reliable one-stop center in Malawi for quality medicines and orthopedic appliances
             </p>
           </div>
 
           <div className="rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-7 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_55px_rgba(2,6,23,0.10)]">
             <h2 className="text-xl font-bold tracking-tight">Our Vision</h2>
             <p className="mt-3 text-slate-700 leading-relaxed">
-              To be the most trusted community pharmacy in Blantyre — known for
-              reliability, speed, and care that treats every patient like family.
+            To establish a premier retail pharmacy in Blantyre by offering a wide range of affordable generic and branded prescription medicines, 
+            together with orthopedic appliances, to serve the community and beyond.
             </p>
           </div>
         </div>
@@ -119,11 +117,10 @@ export default function AboutPage() {
       {/* Values */}
       <section className="mx-auto max-w-6xl px-4 pb-12">
         <h2 className="text-2xl font-bold tracking-tight">
-          What we stand for
+          Why patients trust Pleasant Pharmacy?
         </h2>
         <p className="mt-2 text-slate-600 max-w-3xl">
-          We focus on quality, trust, and consistent service — so you feel
-          confident every time you visit.
+          Quality medicines. Clear guidance. Service you can rely on.
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
