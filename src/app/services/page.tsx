@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const WHATSAPP_LINK =
-  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question%20about%20your%20services.";
+  "https://wa.me/265999925400?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question%20about%20your%20services.";
 
 type Service = {
   name: string;

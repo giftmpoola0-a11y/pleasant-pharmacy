@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const WHATSAPP_LINK =
-  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question.";
+  "https://wa.me/265999925400?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question.";
 
 const CONTACTS = {
   pharmacy: { phoneTel: "+265897533245" },
@@ -13,7 +13,7 @@ const CONTACTS = {
 };
 
 const WHATSAPP =
-  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20would%20like%20to%20inquire.";
+  "https://wa.me/265999925400?text=Hi%20Pleasant%20Pharmacy%2C%20I%20would%20like%20to%20inquire.";
 
 const SERVICES = [
   "Dispensing drugs",
