@@ -41,7 +41,7 @@ const SERVICES: Service[] = [
   {
     name: "Malaria Rapid Test",
     desc: "Fast and reliable malaria testing for prompt diagnosis and reassurance.",
-    img: { src: "/images/malaria-test.jfif", alt: "Malaria rapid test" },
+    img: { src: "/images/malaria.jpg", alt: "Malaria rapid test" },
     secondary: { label: "Visit Us →", href: "/contact" },
   },
   {
