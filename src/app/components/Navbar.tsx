@@ -12,7 +12,7 @@ const NAV = [
 ];
 
 const WHATSAPP =
-  "https://wa.me/265897533245?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question.";
+  "https://wa.me/265999925400?text=Hi%20Pleasant%20Pharmacy%2C%20I%20have%20a%20question.";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
