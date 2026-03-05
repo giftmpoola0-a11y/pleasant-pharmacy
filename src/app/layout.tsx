@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pleasant Pharmacy",
-  description: "Modern pharmacy support in Blantyre, Malawi.",
+  title: "Pleasant Pharmacy | Pharmacy in Blantyre Malawi",
+  description: "Pleasant Pharmacy is a trusted retail pharmacy in Blantyre, Malawi providing prescription dispensing, malaria testing, blood pressure monitoring, and professional pharmacist support.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

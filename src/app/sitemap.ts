@@ -14,9 +14,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://pleasantpharmacy.com/services",
       lastModified: new Date(),
     },
-    {
-      url: "https://pleasantpharmacy.com/contact",
-      lastModified: new Date(),
-    },
   ];
 }
