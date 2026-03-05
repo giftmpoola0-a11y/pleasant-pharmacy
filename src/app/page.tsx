@@ -74,9 +74,11 @@ function IconClock() {
   );
 }
 
+
 export default function HomePage() {
   return (
     <main className="min-h-screen text-slate-900 pb-20">
+      
       {/* Premium background */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-linear-to-b from-emerald-50/70 via-white to-white" />
       <div className="pointer-events-none fixed inset-0 -z-10 opacity-60 [background:radial-gradient(900px_500px_at_15%_15%,rgba(16,185,129,0.18),transparent),radial-gradient(900px_500px_at_85%_10%,rgba(59,130,246,0.12),transparent)]" />
