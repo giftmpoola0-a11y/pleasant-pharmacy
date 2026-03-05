@@ -335,28 +335,46 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        {/* ✅ LOCAL SEO SECTION (add this) */}
+        <div className="mt-12">
+          <div className="rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-6 md:p-8 shadow-[0_12px_45px_rgba(2,6,23,0.06)]">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+              Trusted Pharmacy in Blantyre, Malawi
+            </h2>
 
-        {/* Contact mini cards */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            { label: "Pharmacy", number: CONTACTS.pharmacy.phoneTel },
-            { label: "Pharmacist", number: CONTACTS.pharmacist.phoneTel },
-            { label: "Manager", number: CONTACTS.manager.phoneTel },
-          ].map((c) => (
-            <a
-              key={c.label}
-              href={`tel:${c.number}`}
-              className="rounded-3xl border border-slate-200/60 bg-white/70 backdrop-blur p-5 shadow-[0_10px_30px_rgba(2,6,23,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_55px_rgba(2,6,23,0.12)]"
-              style={{ textDecoration: "none" }}
-            >
-              <div className="text-sm text-slate-500">{c.label}</div>
-              <div className="mt-1 text-lg font-bold text-slate-900">
-                {c.number}
-              </div>
-              <div className="mt-2 text-sm text-slate-600">Tap to call</div>
-            </a>
-          ))}
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              Pleasant Pharmacy is a licensed retail pharmacy located in Blantyre,
+              Malawi. We provide prescription dispensing, symptom support, malaria
+              rapid testing, BP &amp; weight monitoring, and convenient refills.
+            </p>
+
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              If you are looking for a reliable pharmacy in Blantyre or a nearby
+              drugstore for medication support, we’re here to help with fast service
+              and patient-first care.
+            </p>
+
+            <div className="mt-5 flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto rounded-2xl bg-emerald-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 hover:-translate-y-px"
+              >
+                Find us in Blantyre
+              </Link>
+
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto rounded-2xl border border-slate-200/70 bg-white/70 px-6 py-3 text-center text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white hover:-translate-y-px"
+              >
+                WhatsApp the Pharmacy
+              </a>
+            </div>
+          </div>
         </div>
+
+        
 
         <p className="mt-6 text-sm text-slate-500">
           For emergencies, please contact local emergency services.
